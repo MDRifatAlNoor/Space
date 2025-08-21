@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("sky.jpg");
+        }
+        .sun{
+            background-image: url("sun flat.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            box-shadow: -4px 2px 50px orangered;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+        }
+        .mercury-orbit,.venus-orbit,
+        .earth-orbit,.mars-orbit,
+        .jupitar-orbit,.satrun-orbit,
+        .uranus-orbit,.neptune-orbit{
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            background-color: transparent transparent ;
+            border: 1px dotted #dd9;
+            position: absolute;
+            transform: translate(-50%,-50%);
+
+        }
+        .mercury-orbit{
+            width: 170px;
+            height: 170px;
+        }
+        .mercury{
+            width: 20px;
+            height: 20px;
+            background: url("mer.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 45%;
+            left: 45%;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            animation: orbit1 3s linear infinite;
+
+        }
+        @keyframes orbit1{
+            from{
+                transform: rotate(0deg) translateX(85px) rotate(-360deg);
+            }
+            to{
+                transform: rotate(-360deg) translateX(85px) rotate(0deg);
+            }
+        }
+        .venus-orbit{
+            width: 230px;
+            height: 230px;
+        }
+        .venus{
+            width: 25px;
+            height: 25px;
+            background: url(ven.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 43%;
+            left: 43%;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            animation: orbit2 8s linear infinite;
+
+        }
+        @keyframes orbit2{
+            from{
+                transform: rotate(0deg) translateX(115px) rotate(360deg);
+            }
+            to{
+                transform: rotate(360deg) translateX(115px) rotate(0deg);
+            }
+        }
+        .earth-orbit{
+            width: 300px;
+            height: 300px;
+        }
+        .earth{
+            width: 30px;
+            height: 30px;
+            background: url("/8k_earth_daymap.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 45%;
+            left: 45%;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            animation: orbit3 13s linear infinite;
+
+        }
+        @keyframes orbit3{
+            from{
+                transform: rotate(0deg) translateX(150px) rotate(360deg);
+            }
+            to{
+                transform: rotate(360deg) translateX(150px) rotate(0deg);
+            }
+        }
+        .mars-orbit{
+            width: 370px;
+            height: 370px;
+        }
+        .mars{
+            width: 35px;
+            height: 35px;
+            background: url("mars.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 45%;
+            left: 45%;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            animation: orbit4 16s linear infinite;
+
+        }
+        @keyframes orbit4{
+            from{
+                transform: rotate(0deg) translateX(185px) rotate(360deg);
+            }
+            to{
+                transform: rotate(360deg) translateX(185px) rotate(0deg);
+            }
+        }
+        .jupitar-orbit{
+            width: 450px;
+            height: 450px;
+        }
+        .jupitar{
+            width: 55px;
+            height: 55px;
+            background: url("jup.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 45%;
+            left: 45%;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            animation: orbit5 19s linear infinite;
+
+        }
+        @keyframes orbit5{
+            from{
+                transform: rotate(0deg) translateX(225px) rotate(360deg);
+            }
+            to{
+                transform: rotate(360deg) translateX(225px) rotate(0deg);
+            }
+        }
+        .satrun-orbit{
+            width: 550px;
+            height: 550px;
+        }
+        .satrun{
+            width: 65px;
+            height: 65px;
+            background: url("sat.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 43.5%;
+            left: 43.5%;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            animation: orbit6 22s linear infinite;
+
+        }
+        @keyframes orbit6{
+            from{
+                transform: rotate(0deg) translateX(275px) rotate(360deg);
+            }
+            to{
+                transform: rotate(360deg) translateX(275px) rotate(0deg);
+            }
+        }
+        .uranus-orbit{
+            width: 650px;
+            height: 650px;
+        }
+        .uranus{
+            width: 43px;
+            height: 43px;
+            background: url("uranus flat.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 46.5%;
+            left: 46.5%;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            animation: orbit7 25s linear infinite;
+
+        }
+        @keyframes orbit7{
+            from{
+                transform: rotate(0deg) translateX(325px) rotate(360deg);
+            }
+            to{
+                transform: rotate(360deg) translateX(325px) rotate(0deg);
+            }
+        }
+        .neptune-orbit{
+            width: 750px;
+            height: 750px;
+        }
+        .neptune{
+            width: 47px;
+            height: 47px;
+            background: url("nep.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 47%;
+            left: 47%;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            animation: orbit8 28s linear infinite;
+
+        }
+        @keyframes orbit8{
+            from{
+                transform: rotate(0deg) translateX(375px) rotate(360deg);
+            }
+            to{
+                transform: rotate(360deg) translateX(375px) rotate(0deg);
+            }
+        }
+    </style>
+    <div class="sun"></div>
+    <div class="mercury-orbit">
+        <div class="mercury"></div>
+    </div>
+    <div class="venus-orbit">
+        <div class="venus"></div>
+    </div>
+    <div class="earth-orbit">
+        <div class="earth"></div>
+    </div>
+    <div class="mars-orbit">
+        <div class="mars"></div>
+    </div>
+    <div class="jupitar-orbit">
+        <div class="jupitar"></div>
+    </div>
+    <div class="satrun-orbit">
+        <div class="satrun"></div>
+    </div>
+    <div class="uranus-orbit">
+        <div class="uranus"></div>
+    </div>
+    <div class="neptune-orbit">
+        <div class="neptune"></div>
+    </div>
+    
+</body>
+<script>
+      let position = 0;
+        const speed = 0.5; // Adjust the speed of the movement
+
+        function moveBackground() {
+            position -= speed;
+            document.body.style.backgroundPosition = position + 'px 0';
+            requestAnimationFrame(moveBackground);
+        }
+
+        moveBackground()
+    
+</script>
+</html>
